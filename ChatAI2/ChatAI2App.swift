@@ -2,7 +2,7 @@
 //  ChatAI2App.swift
 //  ChatAI2
 //
-//  Created by admin on 29/12/22.
+//  Created by hermantrym on 29/12/22.
 //
 
 import SwiftUI
