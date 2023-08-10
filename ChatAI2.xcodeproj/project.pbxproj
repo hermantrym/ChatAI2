@@ -8,18 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		84F799B1295D7CBC006020EC /* ChatAI2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F799B0295D7CBC006020EC /* ChatAI2App.swift */; };
-		84F799B3295D7CBC006020EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F799B2295D7CBC006020EC /* ContentView.swift */; };
 		84F799B5295D7CBD006020EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84F799B4295D7CBD006020EC /* Assets.xcassets */; };
 		84F799B8295D7CBD006020EC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84F799B7295D7CBD006020EC /* Preview Assets.xcassets */; };
-		84F799C0295D7D3D006020EC /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 84F799BF295D7D3D006020EC /* OpenAISwift */; };
+		DF0B12A02A845FF700A1FA91 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0B129F2A845FF700A1FA91 /* ChatView.swift */; };
+		DF0B12A22A8461E500A1FA91 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0B12A12A8461E500A1FA91 /* ChatViewModel.swift */; };
+		DF0B12A42A84628500A1FA91 /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0B12A32A84628500A1FA91 /* OpenAIService.swift */; };
+		DF0B12A72A84643A00A1FA91 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DF0B12A62A84643A00A1FA91 /* Alamofire */; };
+		DF0B12A92A8466A400A1FA91 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0B12A82A8466A400A1FA91 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		84F799AD295D7CBC006020EC /* ChatAI2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatAI2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F799B0295D7CBC006020EC /* ChatAI2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAI2App.swift; sourceTree = "<group>"; };
-		84F799B2295D7CBC006020EC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		84F799B4295D7CBD006020EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84F799B7295D7CBD006020EC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DF0B129F2A845FF700A1FA91 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		DF0B12A12A8461E500A1FA91 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		DF0B12A32A84628500A1FA91 /* OpenAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
+		DF0B12A82A8466A400A1FA91 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,7 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84F799C0295D7D3D006020EC /* OpenAISwift in Frameworks */,
+				DF0B12A72A84643A00A1FA91 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,9 +60,12 @@
 			isa = PBXGroup;
 			children = (
 				84F799B0295D7CBC006020EC /* ChatAI2App.swift */,
-				84F799B2295D7CBC006020EC /* ContentView.swift */,
 				84F799B4295D7CBD006020EC /* Assets.xcassets */,
 				84F799B6295D7CBD006020EC /* Preview Content */,
+				DF0B129F2A845FF700A1FA91 /* ChatView.swift */,
+				DF0B12A12A8461E500A1FA91 /* ChatViewModel.swift */,
+				DF0B12A82A8466A400A1FA91 /* Constants.swift */,
+				DF0B12A32A84628500A1FA91 /* OpenAIService.swift */,
 			);
 			path = ChatAI2;
 			sourceTree = "<group>";
@@ -86,7 +95,7 @@
 			);
 			name = ChatAI2;
 			packageProductDependencies = (
-				84F799BF295D7D3D006020EC /* OpenAISwift */,
+				DF0B12A62A84643A00A1FA91 /* Alamofire */,
 			);
 			productName = ChatAI2;
 			productReference = 84F799AD295D7CBC006020EC /* ChatAI2.app */;
@@ -117,7 +126,7 @@
 			);
 			mainGroup = 84F799A4295D7CBB006020EC;
 			packageReferences = (
-				84F799BE295D7D3D006020EC /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+				DF0B12A52A84643A00A1FA91 /* XCRemoteSwiftPackageReference "alamofire" */,
 			);
 			productRefGroup = 84F799AE295D7CBC006020EC /* Products */;
 			projectDirPath = "";
@@ -145,8 +154,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84F799B3295D7CBC006020EC /* ContentView.swift in Sources */,
+				DF0B12A92A8466A400A1FA91 /* Constants.swift in Sources */,
+				DF0B12A02A845FF700A1FA91 /* ChatView.swift in Sources */,
+				DF0B12A22A8461E500A1FA91 /* ChatViewModel.swift in Sources */,
 				84F799B1295D7CBC006020EC /* ChatAI2App.swift in Sources */,
+				DF0B12A42A84628500A1FA91 /* OpenAIService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +215,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -257,7 +269,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -278,12 +290,13 @@
 				DEVELOPMENT_TEAM = X9X5VV8C6V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Chat AI 2";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,12 +321,13 @@
 				DEVELOPMENT_TEAM = X9X5VV8C6V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Chat AI 2";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -351,21 +365,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		84F799BE295D7D3D006020EC /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+		DF0B12A52A84643A00A1FA91 /* XCRemoteSwiftPackageReference "alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/adamrushy/OpenAISwift";
+			repositoryURL = "https://github.com/alamofire/alamofire.git";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		84F799BF295D7D3D006020EC /* OpenAISwift */ = {
+		DF0B12A62A84643A00A1FA91 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 84F799BE295D7D3D006020EC /* XCRemoteSwiftPackageReference "OpenAISwift" */;
-			productName = OpenAISwift;
+			package = DF0B12A52A84643A00A1FA91 /* XCRemoteSwiftPackageReference "alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

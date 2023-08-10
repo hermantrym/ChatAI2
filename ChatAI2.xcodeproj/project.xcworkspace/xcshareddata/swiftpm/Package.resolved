@@ -1,12 +1,12 @@
 {
   "pins" : [
     {
-      "identity" : "openaiswift",
+      "identity" : "alamofire",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/adamrushy/OpenAISwift",
+      "location" : "https://github.com/alamofire/alamofire.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "94e1684f380243c2cd4d25fa03ae81d8548a8d8c"
+        "revision" : "bc268c28fb170f494de9e9927c371b8342979ece",
+        "version" : "5.7.1"
       }
     }
   ],
